@@ -25,11 +25,11 @@ get_header(); ?>
 
   <div id="primary" class="content">
     <main id="main" role="main">
-      <h3>Home Page</h3>
-      <?#php get_template_part( 'template-parts/home', 'nominate' ); ?>
-      <?#php get_template_part( 'template-parts/home', 'sponsor' ); ?>
-      <?#php get_template_part( 'template-parts/home', 'meet' ); ?>
-      <?#php get_template_part( 'template-parts/home', 'contact' ); ?>
+      <?php get_template_part( 'template-parts/home', 'about' ); ?>
+      <?php get_template_part( 'template-parts/home', 'portfolio' ); ?>
+      <?php get_template_part( 'template-parts/home', 'testimonials' ); ?>
+      <?php get_template_part( 'template-parts/home', 'blog' ); ?>
+      <?php get_template_part( 'template-parts/home', 'contact' ); ?>
     </main><!-- #main -->
   </div><!-- #primary -->
 </div>

@@ -11,7 +11,7 @@
 
 ?>
 
-      <footer id="main-footer" class="site-footer" role="contentinfo">
+      <footer id="footer-main" class="site-footer" role="contentinfo">
         <div class="container">
           <h2>Footer</h2>
         </div>

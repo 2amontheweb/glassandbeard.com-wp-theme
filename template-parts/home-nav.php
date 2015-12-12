@@ -22,10 +22,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#nomination-form" class="smooth-scroll">Nomination Form</a></li>
-        <li><a href="#sponsor-the-program" class="smooth-scroll">Sponsor the Program</a></li>
-        <li><a href="#media-kit" class="smooth-scroll">Media Kit</a></li>
-        <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+        <li><a href="#home-about-link" class="smooth-scroll">About</a></li>
+        <li><a href="#home-portfolio-link" class="smooth-scroll">Portfolio</a></li>
+        <li><a href="#home-testimonials-link" class="smooth-scroll">Testimonials</a></li>
+        <li><a href="#home-blog-link" class="smooth-scroll">Blog</a></li>
+        <li><a href="#home-contact-link" class="smooth-scroll">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
