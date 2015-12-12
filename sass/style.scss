@@ -1,13 +1,13 @@
 /*!
-Theme Name: Glass and Beard
-Theme URI: http://underscores.me/
+Theme Name: Glass and Beard VERSION_NUMBER
+Theme URI: http://www.toppefirms.com
 Author: Jimmy Pocock
-Author URI: http://jimmypocock.com
-Description: glassandbeard.com
-Version: 1.0.0
+Author URI: http://www.jimmypocock.com
+Description: Description
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: glass-and-beard
+Text Domain: top-pe-firms
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -21,30 +21,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-    ## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Config
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+@import "config/background";
+@import "config/bootstrap-5-columns";
+@import "config/breakpoints";
+@import "config/button";
+@import "config/clearfix";
+@import "config/colors";
+@import "config/fonts";
+@import "config/rem-fallback";
+@import "config/style";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -105,3 +94,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "footer/main";
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+@import "home/config";

@@ -1,0 +1,42 @@
+#home-page {
+  // .navbar-padding {
+  //   padding-top: 50px;
+  // }
+  // .home-section {
+  //   position: relative;
+  //   @include rem-fallback(padding, 2, 0);
+  // }
+  // h2 {
+  //   font-family: $franklin;
+  //   font-weight: 600;
+  //   font-size: 3em;
+  //   text-transform: uppercase;
+  //   letter-spacing: 6px;
+  //   @include rem-fallback(padding-bottom, 0.5);
+  // }
+  // .header-bottom-border {
+  //   height: 3px;
+  //   background: $orange;
+  //   width: 150px;
+  //   margin: 0 auto;
+  //   margin-bottom: 0.5rem;
+  // }
+  // h4 {
+  //   letter-spacing: 1.5px;
+  //   font-size: 1.65em;
+  //   @include rem-fallback(padding-bottom, 2);
+  //   .strong {
+  //     display: block;
+  //     font-weight: 600;
+  //     @include rem-fallback(padding-top, 0.5);
+  //   }
+  // }
+  // .scroll-destination {
+  //   position: absolute;
+  //   top: -50px;
+  // }
+
+  @import "home/top";
+  @import "home/nav";
+
+}

@@ -1,0 +1,38 @@
+
+#home-top {
+  position: relative;
+  @include background;
+  background-color:brown;
+  min-height:400px;
+  .overlay {
+    min-height:400px;
+    background: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-image: linear-gradient(rgba($black, 0.01) 10%, rgba($black, 0.75) 100%);
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .image-container {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    @include mobile {
+      @include rem-fallback(padding, 0, 1);
+    }
+  }
+  .logo-main {
+    margin-bottom: 35px
+  }
+  .nominate-link {
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0, 0.175);
+    }
+  }
+}
