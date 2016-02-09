@@ -1,7 +1,7 @@
 #home-top {
   position: relative;
   @include background;
-  background-color:brown;
+  background: $yellow;
   min-height:400px;
   .overlay {
     min-height:400px;
@@ -12,26 +12,60 @@
     background-attachment: scroll;
     background-image: linear-gradient(rgba($black, 0.01) 10%, rgba($black, 0.75) 100%);
   }
-  img {
-    display: block;
-    margin: 0 auto;
+  .left {
+    background: rgba($black7, 0.45);
   }
-  .image-container {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    @include mobile {
-      @include rem-fallback(padding, 0, 1);
+  .stripes {
+    width: 50%;
+    float: right;
+    position: relative;
+    background: repeating-linear-gradient(
+      135deg,
+      rgba($black7, 0.35),
+      rgba($black7, 0.05) 2px,
+      rgba($black7, 0.35) 5px,
+      rgba($black7, 0.05) 2px
+    );
+
+    .nav {
+      margin-left: 0;
+      text-align: right;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      & > li > a {
+        font-size: 2.5em;
+        color: $yellow;
+        text-transform: uppercase;
+        font-family: $dense;
+        letter-spacing: 1px;
+        line-height: 0.75;
+
+        &:visited,
+        &:active,
+        &:focus,
+        &:hover {
+          text-decoration:none;
+          background: transparent;
+        }
+
+        &:hover {
+          color: darken($yellow, 10);
+        }
+      }
     }
   }
-  .logo-main {
-    margin-bottom: 35px
-  }
-  .nominate-link {
-    &:hover {
-      box-shadow: 0 6px 12px rgba(0,0,0, 0.175);
+  .logo-container {
+    position: relative;
+    @include rem-fallback(padding-left, 1);
+    .logo {
+      text-align: left;
+      position: absolute;
+      top:50%;
+      transform: translate(0, -50%);
     }
   }
 }

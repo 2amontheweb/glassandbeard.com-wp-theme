@@ -135,8 +135,20 @@
   font-style: italic;
 }
 
+/*********
+ * Dense *
+ *********/
+
+ @font-face {
+  font-family: 'Dense';
+  src: url('./fonts/dense/dense-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 $franklin: 'Franklin Gothic', Verdana, Geneva, sans-serif;
 $gaspar: 'Gaspar', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 $avenir: 'Avenir', Futura, Verdana, Geneva, sans-serif;
 $next: 'Avenir Next', Futura, Verdana, Geneva, sans-serif;
 $condensed: 'Avenir Next Condensed', Futura, Verdana, Geneva, sans-serif;
+$dense: 'Dense', Futura, Verdana, Geneva, sans-serif;

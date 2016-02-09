@@ -5,7 +5,7 @@ $(function () {
 
   // set #home-top to full screen
   function fullscreen(){
-    $('#home-top, #home-top .overlay').css({
+    $('#home-top, #home-top .overlay, #home-top, #home-top .overlay .stripes, #home-top, #home-top .overlay .logo-container').css({
       height: ($(window).height() - 50)
     });
   }
