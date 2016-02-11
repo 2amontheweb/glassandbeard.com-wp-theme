@@ -1,3 +1,36 @@
 #home-testimonials {
-  background: pink;
+  background: $grey;
+  @include rem-fallback(padding, 1, 0, 3);
+
+  .container {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .header-container {
+    position: relative;
+    width: 225px;
+    height: 165px;
+    border: 4px solid $yellow;
+    @include rem-fallback(margin-bottom, 2);
+    h2 {
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+    }
+  }
+
+  .testimonial {
+    font-family: $dense;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    @include rem-fallback(padding, 0, 1);
+  }
+  .close-quotes-container {
+    position: relative;
+    height: 150px;
+    .close-quotes {
+      position: absolute;
+      bottom: 10px;
+    }
+  }
 }
