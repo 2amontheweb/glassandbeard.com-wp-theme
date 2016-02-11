@@ -2,15 +2,56 @@
   background: $white;
   .portfolio-main-image {
     @include background;
-    height: 600px;
+    height: 675px;
   }
-  .portfolio-content {
-    width: 550px;
+  .portfolio {
+    @include rem-fallback(padding-top, 2);
   }
   .portfolio-image {
     @include background;
-    height: 265px;
-    width: 265px;
+    height: 250px;
+    width: 250px;
     float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .nav-tabs {
+    border: 0;
+    @include rem-fallback(margin-left, 0.5);
+    @include rem-fallback(margin-bottom, 0.75);
+    li {
+      a {
+        font-family: $dense;
+        font-size: 2.15em;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        color: $darkGrey;
+        border: 0;
+        @include rem-fallback(padding-left, 1);
+
+        &:hover,
+        &:active,
+        &:visited,
+        &:focus {
+          border: 0;
+          background: transparent;
+        }
+        &:hover {
+          color: $yellow;
+        }
+
+      }
+      &.active {
+        a {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  .portfolio-content {
+    width: 550px;
+    @include rem-fallback(margin-left, 1.5);
   }
 }
