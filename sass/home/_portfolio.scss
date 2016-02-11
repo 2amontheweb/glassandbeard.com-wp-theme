@@ -1,3 +1,16 @@
 #home-portfolio {
   background: $white;
+  .portfolio-main-image {
+    @include background;
+    height: 600px;
+  }
+  .portfolio-content {
+    width: 550px;
+  }
+  .portfolio-image {
+    @include background;
+    height: 265px;
+    width: 265px;
+    float: left;
+  }
 }

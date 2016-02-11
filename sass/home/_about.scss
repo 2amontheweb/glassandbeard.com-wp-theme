@@ -1,3 +1,7 @@
 #home-about {
   background: $grey;
+  .about-photo {
+    @include background;
+    min-height: 250px;
+  }
 }

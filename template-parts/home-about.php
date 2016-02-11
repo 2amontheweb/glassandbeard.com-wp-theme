@@ -26,42 +26,40 @@
 
 <div id="home-about" class="home-section">
   <a name="home-about-link" class="scroll-destination"></a>
-  <div class="container">
-    <div class="row">
+  <div class="row">
 
-      <div class="col-sm-5 left">
-        <h2>About</h2>
-        <div class="about-photo" style="background-image:url(<?php echo $about_photo['url']; ?>)">
-          <div class="lines"></div>
-        </div>
+    <div class="col-sm-5 left">
+      <h2>About</h2>
+      <div class="about-photo" style="background-image:url(<?php echo $about_photo['url']; ?>)">
+        <div class="lines"></div>
       </div>
-
-      <div class="col-sm-7">
-        <div class="col-sm-6 middle">
-          <h3 class="welcome-title"><?php echo $welcome_title; ?></h3>
-          <p class="welcome-messgae"><?php echo $welcome_message; ?></p>
-          <img src="<?php echo $signature_image['url']; ?>">
-        </div>
-        <div class="col-sm-6 right">
-          <div class="one">
-            <h4 class="about-header"><?php echo $about_header_one; ?></h4>
-            <p class="about-content"><?php echo $about_content_one; ?></p>
-          </div>
-          <div class="two">
-            <h4 class="about-header"><?php echo $about_header_two; ?></h4>
-            <p class="about-content"><?php echo $about_content_two; ?></p>
-          </div>
-          <div class="three">
-            <h4 class="about-header"><?php echo $about_header_three; ?></h4>
-            <p class="about-content"><?php echo $about_content_three; ?></p>
-          </div>
-          <div class="four">
-            <h4 class="about-header"><?php echo $about_header_four; ?></h4>
-            <p class="about-content"><?php echo $about_content_four; ?></p>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="col-sm-7">
+      <div class="col-sm-6 middle">
+        <h3 class="welcome-title"><?php echo $welcome_title; ?></h3>
+        <p class="welcome-messgae"><?php echo $welcome_message; ?></p>
+        <img src="<?php echo $signature_image['url']; ?>">
+      </div>
+      <div class="col-sm-6 right">
+        <div class="one">
+          <h4 class="about-header"><?php echo $about_header_one; ?></h4>
+          <p class="about-content"><?php echo $about_content_one; ?></p>
+        </div>
+        <div class="two">
+          <h4 class="about-header"><?php echo $about_header_two; ?></h4>
+          <p class="about-content"><?php echo $about_content_two; ?></p>
+        </div>
+        <div class="three">
+          <h4 class="about-header"><?php echo $about_header_three; ?></h4>
+          <p class="about-content"><?php echo $about_content_three; ?></p>
+        </div>
+        <div class="four">
+          <h4 class="about-header"><?php echo $about_header_four; ?></h4>
+          <p class="about-content"><?php echo $about_content_four; ?></p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
