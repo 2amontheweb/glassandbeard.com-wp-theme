@@ -16,12 +16,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!-- <a class="navbar-brand" href="#"><img src="<?#php bloginfo('stylesheet_directory'); ?>/img/top-50.png" alt="Top 50 Nav Logo"></a> -->
+      <a class="navbar-brand" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-logo.png" class="pull-left"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-logo.png" class="pull-left">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home-about-link" class="smooth-scroll">About</a></li>
         <li><a href="#home-portfolio-link" class="smooth-scroll">Portfolio</a></li>

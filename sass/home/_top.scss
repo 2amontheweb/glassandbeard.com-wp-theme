@@ -13,7 +13,7 @@
     background-image: linear-gradient(rgba($black, 0.01) 10%, rgba($black, 0.75) 100%);
   }
   .left {
-    background: rgba($black7, 0.45);
+    background: rgba($black, 0.45);
   }
   .stripes {
     width: 50%;
@@ -21,10 +21,10 @@
     position: relative;
     background: repeating-linear-gradient(
       135deg,
-      rgba($black7, 0.35),
-      rgba($black7, 0.05) 2px,
-      rgba($black7, 0.35) 5px,
-      rgba($black7, 0.05) 2px
+      rgba($black, 0.35),
+      rgba($black, 0.05) 2px,
+      rgba($black, 0.35) 5px,
+      rgba($black, 0.05) 2px
     );
 
     .nav {
