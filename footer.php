@@ -13,7 +13,11 @@
 
       <footer id="footer-main" class="site-footer" role="contentinfo">
         <div class="container">
-          <h2>Footer</h2>
+          <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/footer-logo.png">
+          <div class="info">Phone: <a href="tel:5125853070">512.585.3070</a></div>
+          <div class="info">Email: <a href="mailto:ianfriedel@gmail.com">ianfriedel@gmail.com</a></div>
+          <div class="border"></div>
+          <div class="copyright">Glass &amp; Beard Media Copyright <?php echo date("Y") ?></div>
         </div>
       </footer><!-- #colophon -->
       <?php wp_footer(); ?>
