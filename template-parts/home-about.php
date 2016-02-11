@@ -36,12 +36,12 @@
     </div>
 
     <div class="col-sm-7">
-      <div class="col-sm-6 middle">
+      <div class="col-sm-5 middle">
         <h3 class="welcome-title"><?php echo $welcome_title; ?></h3>
-        <p class="welcome-messgae"><?php echo $welcome_message; ?></p>
+        <p class="welcome-message"><?php echo $welcome_message; ?></p>
         <img src="<?php echo $signature_image['url']; ?>">
       </div>
-      <div class="col-sm-6 right">
+      <div class="col-sm-7 right">
         <div class="one">
           <h4 class="about-header"><?php echo $about_header_one; ?></h4>
           <p class="about-content"><?php echo $about_content_one; ?></p>

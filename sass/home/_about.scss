@@ -1,7 +1,45 @@
 #home-about {
   background: $grey;
+  .left,
+  .middle,
+  .right {
+    @include rem-fallback(padding-top, 3);
+  }
+  .left {
+
+  }
   .about-photo {
     @include background;
     min-height: 250px;
+  }
+
+  .middle {
+    background: $darkGrey;
+    @include rem-fallback(padding-right, 1.5);
+    @include rem-fallback(padding-left, 1.5);
+    .welcome-title,
+    .welcome-message {
+      color: $grey;
+    }
+    .welcome-title {
+      font-family: $dense;
+      text-align: left;
+      font-size: 3.25em;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      @include rem-fallback(padding-bottom, 0.75);
+    }
+    .welcome-message {
+      font-family: $gaspar;
+      font-weight: 600;
+      font-size: 1.25em;
+      text-align: justify;
+    }
+  }
+
+  .right {
+    .about-header {
+      font-family: $gaspar;
+    }
   }
 }
