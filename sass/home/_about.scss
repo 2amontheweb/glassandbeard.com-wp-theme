@@ -85,6 +85,9 @@
       font-size: 1.25em;
       line-height: 1.1;
       text-align: justify;
+      &:last-child {
+        @include rem-fallback(padding-bottom, 1);
+      }
     }
 
   }

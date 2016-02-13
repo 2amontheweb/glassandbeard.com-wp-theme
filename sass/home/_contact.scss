@@ -1,8 +1,62 @@
 #home-contact {
   background: $grey;
-
+  @include rem-fallback(padding, 4, 0);
+  h2 {
+    text-align: left;
+    @include rem-fallback(padding-bottom, 1.5);
+  }
   p {
     margin-bottom: 0;
   }
-
+  input,
+  textarea {
+    border: 2px solid $yellow;
+    background: darken($grey, 7.5);
+    font-family: $gaspar;
+    font-weight: 600;
+    font-size: 1.25em;
+    border-radius: 0;
+    width: 100%;
+    @include rem-fallback(padding, 0.25, 0.5);
+  }
+  input {
+    transition: all 0.3s ease;
+    height: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    &[type="submit"] {
+      width: 100px;
+      float: left;
+      box-shadow: 0 0 0;
+      background: $yellow;
+      color: $darkGrey;
+      text-shadow: 0 0 0;
+      border: 1px solid $yellow;
+      border-bottom: 1px solid darken($yellow, 7.5);
+      border-right: 1px solid darken($yellow, 7.5);
+      &:hover {
+        background: darken($yellow, 7.5);
+        border-bottom: 1px solid darken($yellow, 12.5);
+        border-right: 1px solid darken($yellow, 12.5);
+      }
+      &:active {
+        background: darken($yellow, 12.5);
+        border-bottom: 1px solid darken($yellow, 17.5);
+        border-right: 1px solid darken($yellow, 17.5);
+      }
+    }
+  }
+  textarea {
+    min-height: 110px;
+    max-height: 110px;
+  }
+  .container {
+    max-width: 600px;
+  }
+  .left {
+    @include rem-fallback(padding-right, 0.65);
+  }
+  .right {
+    @include rem-fallback(padding-left, 0.65);
+  }
 }
