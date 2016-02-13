@@ -31,7 +31,7 @@
     <div class="col-sm-5 left">
       <h2>About</h2>
       <div class="about-photo" style="background-image:url(<?php echo $about_photo['url']; ?>)">
-        <div class="lines"></div>
+        <div class="stripes"></div>
       </div>
     </div>
 
@@ -39,7 +39,7 @@
       <div class="col-sm-5 middle">
         <h3 class="welcome-title"><?php echo $welcome_title; ?></h3>
         <p class="welcome-message"><?php echo $welcome_message; ?></p>
-        <img src="<?php echo $signature_image['url']; ?>">
+        <img class="signature" src="<?php echo $signature_image['url']; ?>">
       </div>
       <div class="col-sm-7 right">
         <div class="one">

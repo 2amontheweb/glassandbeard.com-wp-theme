@@ -29,4 +29,6 @@ $(function () {
   }
 
   document.onscroll = scroll;
+
+  $('#home-about .middle').height($('#home-about .right').height());
 });

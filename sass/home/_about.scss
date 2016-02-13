@@ -1,22 +1,45 @@
 #home-about {
   background: $grey;
-  .left,
   .middle,
   .right {
-    @include rem-fallback(padding-top, 3);
+    padding-top: 120px;
   }
+
   .left {
-
+    position: relative;
+    min-height: 565px;
+    h2 {
+      position: absolute;
+      top: 70px;
+      right: 150px;
+    }
+    .about-photo {
+      position: absolute;
+      top:120px;
+      right: 0;
+      @include background;
+      width: 206px;
+      height: 300px;
+      .stripes {
+        width: 33.3333%;
+        height: 300px;
+        float: left;
+        position: relative;
+        background: repeating-linear-gradient(
+          135deg,
+          rgba($yellow, 0.5),
+          rgba($black, 0.00) 2px,
+          rgba($yellow, 0.5) 5px,
+          rgba($black, 0.00) 2px
+        );
+      }
+    }
   }
-  .about-photo {
-    @include background;
-    min-height: 250px;
-  }
-
   .middle {
     background: $darkGrey;
-    @include rem-fallback(padding-right, 1.5);
-    @include rem-fallback(padding-left, 1.5);
+    position: relative;
+    @include rem-fallback(padding-right, 2);
+    @include rem-fallback(padding-left, 2);
     .welcome-title,
     .welcome-message {
       color: $grey;
@@ -33,13 +56,36 @@
       font-family: $gaspar;
       font-weight: 600;
       font-size: 1.25em;
+      line-height: 1.1;
       text-align: justify;
+    }
+    .signature {
+      position: absolute;
+      bottom: 10px;
+      max-width: 200px;
     }
   }
 
   .right {
-    .about-header {
+    @include rem-fallback(padding-left, 1.5);
+    .about-header,
+    .about-content {
       font-family: $gaspar;
+      max-width: 200px;
+      text-align: left;
     }
+    .about-header {
+      font-size: 1.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      @include rem-fallback(padding-bottom, 0.65);
+    }
+    .about-content {
+      font-weight: 600;
+      font-size: 1.25em;
+      line-height: 1.1;
+      text-align: justify;
+    }
+
   }
 }
