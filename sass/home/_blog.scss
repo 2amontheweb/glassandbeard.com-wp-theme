@@ -1,4 +1,92 @@
 #home-blog {
   background: $white;
+  background: linear-gradient(to right, $white 50%, $black 50%);
+  .stripes {
+    width: 50%;
+    position: absolute;
+    background: repeating-linear-gradient(
+      135deg,
+      rgba($white, 0.2),
+      rgba($white, 0.04) 10px,
+      rgba($white, 0.35) 5px
+    );
+  }
+
+  h2 {
+    @include rem-fallback(padding-top, 4)
+    @include rem-fallback(padding-bottom, 3);
+  }
+
+  .container {
+    max-width: 970px;
+  }
+
+  .post {
+    position: relative;
+    @include rem-fallback(padding-bottom, 4);
+    &:last-child {
+      @include rem-fallback(padding-bottom, 6);
+    }
+  }
+
+  .featured-image { // 664w × 419h
+    width: 664px;
+    height: 419px;
+  }
+
+  .date {
+    @include rem-fallback(padding, 1, 0, 0, 1);
+    color: $white;
+    font-family: $dense;
+    .day, .slash, .month {
+      float: left;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+    .day {
+      font-family: $gaspar;
+      font-size: 8em;
+      font-weight: 600;
+    }
+    .slash, .month {
+      font-size: 5em;
+    }
+  }
+
+  .info {
+    position: absolute;
+    top: 25px;
+    background: white;
+    left: 485px;
+    width: 400px;
+    @include rem-fallback(padding, 1.25, 1.75, 1.75, 2);
+
+    h3, p {
+      font-family: $gaspar;
+      text-align: left;
+    }
+    h3 {
+      a {
+        color: $yellow;
+        font-weight: 600;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        &:hover {
+          color: darken($yellow, 10);
+        }
+      }
+    }
+    p {
+      margin: 0;
+      font-size: 1.75em;
+      line-height: 1.25;
+      .continue-reading-link {
+        color: $yellow;
+        &:hover {
+          color: darken($yellow, 10);
+        }
+      }
+    }
+  }
 
 }

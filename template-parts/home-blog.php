@@ -7,61 +7,47 @@
 ?>
 
 <div id="home-blog" class="home-section">
+  <div class="stripes"></div>
   <a name="home-blog-link" class="scroll-destination"></a>
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
         <h2>Blog</h2>
-        <?#php
 
-          // query_posts('show_posts=2');
+        <?php $args = array(
+          'posts_per_page'   => 2,
+          'offset'           => 0,
+          'category'         => '',
+          'category_name'    => '',
+          'orderby'          => 'date',
+          'order'            => 'DESC',
+          'include'          => '',
+          'exclude'          => '',
+          'meta_key'         => '',
+          'meta_value'       => '',
+          'post_type'        => 'post',
+          'post_mime_type'   => '',
+          'post_parent'      => '',
+          'author'     => '',
+          'post_status'      => 'publish',
+          'suppress_filters' => true
+        );
 
-          // if ( have_posts() ) :
+        $latest_posts = get_posts( $args );
+        foreach ( $latest_posts as $post ) :
+          setup_postdata( $post ); ?>
 
-            /* Start the Loop */
-      // while ( have_posts() ) : the_post();
-
-        /*
-         * Include the Post-Format-specific template for the content.
-         * If you want to override this in a child theme, then include a file
-         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-         */
-        // get_template_part( 'template-parts/content', get_post_format() );
-
-      // endwhile;
-
-      // the_posts_navigation();
-
-    // else :
-
-      // get_template_part( 'template-parts/content', 'none' );
-
-    // endif;
-
-          // $home_query = new WP_Query('showposts=2');
-
-          // if ( $home_query -> have_posts() ) :
-            // while ( $home_query -> have_posts() ) :
-              // $home_query -> the_post();
-
-              // glass_and_beard_posted_on();
-
-              // if ( is_single() ) {
-              //   the_title( '<h3 class="entry-title">', '</h3>' );
-              // } else {
-                // the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-              // }
-            ?>
-            <!-- <div class="entry-content">
-              <?#php the_excerpt(); ?>
-            </div> -->
-            <!-- <img src="<?#php echo the_post_thumbnail(); ?>"> -->
-
-          <?php
-            // endwhile;
-          // endif;
-
-        ?>
+          <div class="post">
+            <div class="featured-image" style="background-image:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>)">
+              <div class="date"><?php echo the_date('d/m'); ?></div>
+            </div>
+            <div class="info">
+              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <p><?php the_excerpt(); ?></p>
+            </div>
+          </div>
+        <?php endforeach;
+        wp_reset_postdata(); ?>
 
       </div>
       <div class="col-sm-6"></div>
