@@ -10,42 +10,37 @@
 
 <article class="post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="entry-meta">
-      <?php glass_and_beard_posted_on(); ?>
-    </div><!-- .entry-meta -->
+  <div class="row">
+    <div class="col-sm-3 col-md-4">
 
+      <div class="date">
+        <?php the_weekday(); ?> <?php the_date('m.j.y'); ?>
+      </div>
+      <div class="posted-by">
+        posted by Ian Friedel
+      </div>
 
-  <header class="entry-header">
+    </div>
+    <div class="col-sm-9 col-md-8">
 
-    <?php
-    if ( is_single() ) {
-      the_title( '<h3 class="entry-title">', '</h3>' );
-    } else {
-      the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-    } ?>
+      <div class="entry-content">
+        <div class="content">
+          <?php
+            the_content( sprintf(
+              /* translators: %s: Name of current post. */
+              wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'glass-and-beard' ), array( 'span' => array( 'class' => array() ) ) ),
+              the_title( '<span class="screen-reader-text">"', '"</span>', false )
+              ) );
 
-  </header>
+            wp_link_pages( array(
+              'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'glass-and-beard' ),
+              'after'  => '</div>',
+            ) );
+          ?>
+        </div>
+        <img class="featured-image" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>">
+      </div>
+    </div>
 
-  <div class="entry-content">
-    <?php
-    the_content( sprintf(
-      /* translators: %s: Name of current post. */
-      wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'glass-and-beard' ), array( 'span' => array( 'class' => array() ) ) ),
-      the_title( '<span class="screen-reader-text">"', '"</span>', false )
-      ) );
-
-    wp_link_pages( array(
-      'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'glass-and-beard' ),
-      'after'  => '</div>',
-      ) );
-      ?>
-    </div><!-- .entry-content -->
-
-
-
-
-
-    <footer class="entry-footer">
-      <?php glass_and_beard_entry_footer(); ?>
-    </footer><!-- .entry-footer -->
-  </article><!-- #post-## -->
+  </div>
+</article>

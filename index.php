@@ -20,24 +20,26 @@ get_header(); ?>
 
   <div id="index-page" class="content-area">
     <main id="main" class="site-main" role="main">
+      <div class="container">
 
-      <?php
-      if ( have_posts() ) :
-        while ( have_posts() ) : the_post();
-          get_template_part( 'template-parts/content', get_post_format() );
+        <?php
+        if ( have_posts() ) :
+          while ( have_posts() ) : the_post();
+            get_template_part( 'template-parts/content', get_post_format() );
 
-        endwhile;
+          endwhile;
 
-        $args = array(
-            'prev_text'          => __( 'Next Page' ),
-            'next_text'          => __( 'Previous Page' ),
-            'screen_reader_text' => __( 'Posts navigation' )
-        );
-        the_posts_navigation($args);
+          $args = array(
+              'prev_text'          => __( 'Next Page' ),
+              'next_text'          => __( 'Previous Page' ),
+              'screen_reader_text' => __( 'Posts navigation' )
+          );
+          the_posts_navigation($args);
 
-      else :
-        get_template_part( 'template-parts/content', 'none' );
-      endif; ?>
+        else :
+          get_template_part( 'template-parts/content', 'none' );
+        endif; ?>
+      </div>
 
     </main><!-- #main -->
   </div><!-- #primary -->
