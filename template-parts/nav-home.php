@@ -2,11 +2,11 @@
 /**
  * Home Navbar
  *
- * @package Top_PE_Firms
+ * @package glass_and_beard
  */
 ?>
 
-<nav class="navbar" id="home-nav">
+<nav class="navbar gold-nav" id="home-nav">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

@@ -16,15 +16,15 @@ $(function () {
   });
 
   // manage fixed nav on scroll
-  var navbar = $('.navbar');
+  var navbar = $('#home-nav');
   var origOffsetY = navbar.offset().top;
   function scroll() {
     if ($(window).scrollTop() >= origOffsetY) {
-      $('.navbar').addClass('sticky');
-      $('.content').addClass('navbar-padding');
+      navbar.addClass('sticky');
+      $('#home-content').addClass('navbar-padding');
     } else {
-      $('.navbar').removeClass('sticky');
-      $('.content').removeClass('navbar-padding');
+      navbar.removeClass('sticky');
+      $('#home-content').removeClass('navbar-padding');
     }
   }
 

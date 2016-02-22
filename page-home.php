@@ -11,10 +11,10 @@ get_header(); ?>
        ============ -->
   <header id="masthead" class="site-header" role="banner">
     <?php get_template_part( 'template-parts/home', 'top' ); ?>
-    <?php get_template_part( 'template-parts/home', 'nav' ); ?>
+    <?php get_template_part( 'template-parts/nav', 'home' ); ?>
   </header><!-- #masthead -->
 
-  <div id="primary" class="content">
+  <div id="home-content" class="content">
     <main id="main" role="main">
       <?php get_template_part( 'template-parts/home', 'about' ); ?>
       <?php get_template_part( 'template-parts/home', 'portfolio' ); ?>
