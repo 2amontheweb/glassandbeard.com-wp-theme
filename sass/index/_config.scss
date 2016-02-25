@@ -43,7 +43,6 @@
 
     .nav-next,
     .nav-previous {
-      // min-height: 30px;
       a {
         display: block;
         background: $darkGrey;
@@ -53,16 +52,7 @@
         font-size: 1.45em;
         font-weight: 600;
         letter-spacing: 1px;
-        // height: 30px;
         @include rem-fallback(padding, 0.5, 1);
-        // &:after {
-        //   width: 0;
-        //   height: 0;
-        //   border-top: 60px solid transparent;
-        //   border-bottom: 60px solid transparent;
-
-        //   border-left: 60px solid green;
-        // }
         &:hover {
           color: $darkGrey;
           background: $yellow;

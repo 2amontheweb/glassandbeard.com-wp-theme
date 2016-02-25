@@ -52,5 +52,6 @@
       </div>
       <div class="col-sm-6"></div>
     </div>
+    <a href="/blog" class="read-more-link">Read More</a>
   </div>
 </div>

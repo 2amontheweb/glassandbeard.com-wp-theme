@@ -1,6 +1,7 @@
 #home-blog {
   background: $white;
   background: linear-gradient(to right, $white 50%, $black 50%);
+  @include rem-fallback(padding-bottom, 4);
   .stripes {
     width: 50%;
     position: absolute;
@@ -10,6 +11,7 @@
       rgba($white, 0.04) 10px,
       rgba($white, 0.35) 5px
     );
+    @include rem-fallback(padding-bottom, 4);
   }
 
   h2 {
@@ -25,7 +27,7 @@
     position: relative;
     @include rem-fallback(padding-bottom, 4);
     &:last-child {
-      @include rem-fallback(padding-bottom, 6);
+      @include rem-fallback(padding-bottom, 2);
     }
   }
 
@@ -89,4 +91,18 @@
     }
   }
 
+  .read-more-link {
+    background: $darkGrey;
+    color: $yellow;
+    font-family: $gaspar;
+    text-transform: uppercase;
+    font-size: 1.45em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    @include rem-fallback(padding, 0.5, 1);
+    &:hover {
+      color: $darkGrey;
+      background: $yellow;
+    }
+  }
 }
