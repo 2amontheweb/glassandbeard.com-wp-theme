@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-sm-3 col-md-4">
 
-      <div class="date">
+      <div class="blog-date">
         <?php the_weekday(); ?> <?php the_date('m.j.y'); ?>
       </div>
       <div class="posted-by">

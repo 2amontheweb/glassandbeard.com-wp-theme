@@ -18,7 +18,7 @@ get_header(); ?>
     <?php get_template_part( 'template-parts/nav', 'main' ); ?>
   </header><!-- #masthead -->
 
-  <div id="index-page" class="content-area">
+  <div id="index-page" class="content-area blog-page">
     <main id="main" class="site-main" role="main">
       <div class="container">
 

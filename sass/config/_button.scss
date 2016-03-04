@@ -27,3 +27,24 @@
     box-shadow: inset 0 0 6px 3px $inset;
   }
 }
+
+@mixin gold_button() {
+  float: left;
+  box-shadow: 0 0 0;
+  background: $yellow;
+  color: $darkGrey;
+  text-shadow: 0 0 0;
+  border: 1px solid $yellow;
+  border-bottom: 1px solid darken($yellow, 7.5);
+  border-right: 1px solid darken($yellow, 7.5);
+  &:hover {
+    background: darken($yellow, 7.5);
+    border-bottom: 1px solid darken($yellow, 12.5);
+    border-right: 1px solid darken($yellow, 12.5);
+  }
+  &:active {
+    background: darken($yellow, 12.5);
+    border-bottom: 1px solid darken($yellow, 17.5);
+    border-right: 1px solid darken($yellow, 17.5);
+  }
+}

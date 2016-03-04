@@ -15,20 +15,23 @@ $(function () {
     fullscreen();
   });
 
-  // manage fixed nav on scroll
-  var navbar = $('#home-nav');
-  var origOffsetY = navbar.offset().top;
-  function scroll() {
-    if ($(window).scrollTop() >= origOffsetY) {
-      navbar.addClass('sticky');
-      $('#home-content').addClass('navbar-padding');
-    } else {
-      navbar.removeClass('sticky');
-      $('#home-content').removeClass('navbar-padding');
-    }
-  }
 
-  document.onscroll = scroll;
+  // manage fixed nav on home page scroll
+  var navbar = $('#home-nav');
+  if (navbar.length !== 0) {
+    var origOffsetY = navbar.offset().top;
+
+    var scroll = function() {
+      if ($(window).scrollTop() >= origOffsetY) {
+        navbar.addClass('sticky');
+        $('#home-content').addClass('navbar-padding');
+      } else {
+        navbar.removeClass('sticky');
+        $('#home-content').removeClass('navbar-padding');
+      }
+    };
+    document.onscroll = scroll;
+  }
 
   $('#home-about .middle').height($('#home-about .right').height());
 
