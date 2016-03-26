@@ -46,4 +46,11 @@ $(function () {
   $( '#home-blog .stripes' ).height( $( '#home-blog' ).height() );
   $( '#home-blog .stripes' ).css( 'margin-left', ($( '#home-blog' ).width() / 2) + 'px' );
 
+
+  $('.portfolio-wrapper').slick({
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
 });

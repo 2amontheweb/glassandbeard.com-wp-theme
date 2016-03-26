@@ -23,5 +23,6 @@ get_header(); ?>
       <?php get_template_part( 'template-parts/home', 'contact' ); ?>
     </main><!-- #main -->
   </div><!-- #primary -->
+  <?php get_template_part( 'template-parts/home', 'modals' ); ?>
 </div>
 <?php get_footer(); ?>

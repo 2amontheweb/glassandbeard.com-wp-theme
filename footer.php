@@ -23,6 +23,12 @@
       <?php wp_footer(); ?>
     </div><!-- #page -->
 
+    <!-- Bootstrap core JavaScript & jQuery
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ?>/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/slick/slick.min.js"></script>
     <script src="<?php bloginfo('template_directory') ?>/js/bundled.js"></script>
 
   </body>

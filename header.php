@@ -22,12 +22,11 @@
     <link href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
-    <!-- <link href="<?#php bloginfo('stylesheet_directory'); ?>/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="<?php bloginfo('stylesheet_directory'); ?>/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core JavaScript & jQuery
-    ================================================== -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="<?php bloginfo('template_directory') ?>/js/bootstrap.min.js"></script>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/slick/slick-theme.css"/>
 
     <?php wp_head(); ?>
 
