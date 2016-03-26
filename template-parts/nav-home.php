@@ -16,7 +16,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/nav-logo.png" class="pull-left"></a>
+      <?php get_template_part( 'template-parts/nav', 'brand' ); ?>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
