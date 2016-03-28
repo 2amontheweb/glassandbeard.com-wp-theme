@@ -53,6 +53,7 @@ gulp.task('zip', function() {
       'js/*',
       'languages/*',
       'slick/*',
+      'jquery.bxslider/*',
       'template-parts/*',
       './*.php',
       './*.css',

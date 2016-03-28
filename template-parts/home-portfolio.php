@@ -55,9 +55,7 @@
         ?>
 
         <div class="image-wrapper">
-          <div class="image" style="background-image: url(<?php echo $i['url'] ?>);">
-
-          </div>
+          <div class="image" style="background-image: url(<?php echo $i['url'] ?>);"></div>
         </div>
 
         <?php

@@ -46,11 +46,23 @@ $(function () {
   $( '#home-blog .stripes' ).height( $( '#home-blog' ).height() );
   $( '#home-blog .stripes' ).css( 'margin-left', ($( '#home-blog' ).width() / 2) + 'px' );
 
-
-  $('.portfolio-wrapper').slick({
+  $('#home-portfolio .portfolio-wrapper').slick({
     infinite: true,
     speed: 500,
     fade: true,
+    slidesToShow: 1,
+    adaptiveHeight: true,
     cssEase: 'linear'
+  });
+
+  $('.modal .portfolio-wrapper').bxSlider({
+    auto: true,
+    pause: 5000,
+    infiniteLoop: true,
+    speed: 500,
+    pager: false,
+    mode: 'fade',
+    adaptiveHeight: true,
+    adaptiveHeightSpeed: 500
   });
 });

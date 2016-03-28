@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/slick/slick-theme.css"/>
 
+    <!-- bxSlider -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory') ?>/jquery.bxslider/jquery.bxslider.css"/>
+
     <?php wp_head(); ?>
 
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -25,7 +25,7 @@
   foreach($carousels as $c) {
 
 ?>
-  <div class="modal fade active" id="<?php echo $c ?>-modal" tabindex="-1" role="dialog" aria-labelledby="<?php echo $c ?>-modal-label" aria-hidden="true">
+  <div class="modal active" id="<?php echo $c ?>-modal" tabindex="-1" role="dialog" aria-labelledby="<?php echo $c ?>-modal-label">
     <div class="modal-dialog">
       <div class="modal-header">
         <button type="button" class="modal-close" data-dismiss="modal">
@@ -34,8 +34,34 @@
         </button>
       </div>
       <div class="modal-body">
-        <?php $pf_photography_top_left_carousel = get_field($c); ?>
-        <?php echo $pf_photography_top_left_carousel; ?>
+        <div class="portfolio-wrapper">
+
+          <?php
+
+            $post_object = get_field($c);
+
+            if( $post_object ):
+
+              // override $post
+              $post = $post_object;
+              setup_postdata( $post );
+
+              $image1 = get_field('carousel_image_1', $post_object->ID);
+              $image2 = get_field('carousel_image_2', $post_object->ID);
+              $image3 = get_field('carousel_image_3', $post_object->ID);
+              $image4 = get_field('carousel_image_4', $post_object->ID);
+
+              ?>
+
+                <div class="image" style="background-image: url(<?php echo $image1['url'] ?>);"></div>
+                <div class="image" style="background-image: url(<?php echo $image2['url'] ?>);"></div>
+                <div class="image" style="background-image: url(<?php echo $image3['url'] ?>);"></div>
+                <div class="image" style="background-image: url(<?php echo $image4['url'] ?>);"></div>
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+          <?php endif; ?>
+
+        </div>
+
       </div>
       <div class="modal-footer">
       </div>

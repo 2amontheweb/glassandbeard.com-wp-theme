@@ -4,5 +4,27 @@
     .modal-footer {
       border: 0;
     }
+
+    .modal-close {
+      float: right;
+      background: transparent;
+      border: 0;
+      box-shadow: 0 0 0;
+      color: $yellow;
+      font-size: 3em;
+      top: 30px;
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      text-shadow: 0 3px 6px $black;
+    }
+
+    .portfolio-wrapper {
+      .image {
+        @include background;
+        width: 100%!important;
+        height: 400px;
+      }
+    }
   }
 }
