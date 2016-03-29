@@ -1,5 +1,9 @@
 .modal {
   .modal-dialog {
+    @include aboveMobile {
+      width: 75%;
+      height: 75%;
+    }
     .modal-header,
     .modal-footer {
       border: 0;
@@ -23,7 +27,7 @@
       .image {
         @include background;
         width: 100%!important;
-        height: 400px;
+        height: 550px;
       }
     }
   }
