@@ -32,6 +32,7 @@ $modalHeightPercentage: 0.61923077;
 .modal {
   .modal-dialog {
     @include imageDimensions;
+    margin: 0 auto;
     @include aboveMobile {
       width: 75%;
       height: 75%;

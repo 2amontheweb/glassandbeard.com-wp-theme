@@ -69,6 +69,12 @@
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
+
+    @include mobile {
+      width: 100%;
+      float: none;
+      @include rem-fallback(margin, 0, 0, 1.5);
+    }
   }
 
   .nav-tabs {
@@ -108,5 +114,10 @@
   .portfolio-content {
     width: 550px;
     @include rem-fallback(margin-left, 1.5);
+    @include mobile {
+      width: initial;
+      margin-left: 0;
+      @include rem-fallback(padding, 0, 1);
+    }
   }
 }
