@@ -1,17 +1,33 @@
 #home-about {
   background: $grey;
+
   .middle,
   .right {
     padding-top: 120px;
+    @include mobile {
+      @include rem-fallback(padding, 2, 0);
+    }
   }
 
   .left {
     position: relative;
     min-height: 565px;
+
+    @include mobile {
+      min-height: initial;
+      @include rem-fallback(padding, 2, 0);
+    }
     h2 {
       position: absolute;
       top: 70px;
       right: 150px;
+
+      @include mobile {
+        position: relative;
+        top: 0;
+        right: 0;
+        @include rem-fallback(padding-bottom, 1);
+      }
     }
     .about-photo {
       position: absolute;
@@ -20,6 +36,13 @@
       @include background;
       width: 206px;
       height: 300px;
+
+      @include mobile {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+      }
       .stripes {
         width: 33.3333%;
         height: 300px;
@@ -40,6 +63,12 @@
     position: relative;
     @include rem-fallback(padding-right, 2);
     @include rem-fallback(padding-left, 2);
+      // @include mobile {
+      //   position: relative;
+      //   top: 0;
+      //   right: 0;
+      //   @include rem-fallback(padding-bottom, 1);
+      // }
     .welcome-title,
     .welcome-message {
       color: $grey;
@@ -63,16 +92,27 @@
       position: absolute;
       bottom: 10px;
       max-width: 200px;
+      @include mobile {
+        position: relative;
+        bottom: initial;
+        margin: 0 auto;
+      }
     }
   }
 
   .right {
     @include rem-fallback(padding-left, 1.5);
+    @include mobile {
+      @include rem-fallback(padding-right, 1.5);
+    }
     .about-header,
     .about-content {
       font-family: $gaspar;
       max-width: 200px;
       text-align: left;
+      @include mobile {
+        max-width: initial;
+      }
     }
     .about-header {
       font-size: 1.75em;
@@ -89,6 +129,5 @@
         @include rem-fallback(padding-bottom, 1);
       }
     }
-
   }
 }

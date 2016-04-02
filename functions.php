@@ -162,3 +162,9 @@ function replace_excerpt($content) {
   );
 }
 add_filter('the_excerpt', 'replace_excerpt');
+
+/**
+ * Removes admin bar.
+ * COMMENT THIS CODE BEFORE ZIP!!!
+ */
+add_filter('show_admin_bar', '__return_false');

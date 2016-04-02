@@ -33,7 +33,9 @@ $(function () {
     document.onscroll = scroll;
   }
 
-  $('#home-about .middle').height($('#home-about .right').height());
+  if ($(window).width() >= 768) {
+    $('#home-about .middle').height($('#home-about .right').height());
+  }
 
   // Set up date for each blog post.
   $('.date').each(function(){

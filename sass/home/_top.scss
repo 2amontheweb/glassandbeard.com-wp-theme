@@ -3,6 +3,10 @@
   @include background;
   background: $yellow;
   min-height:400px;
+
+  @include mobile {
+    display: none;
+  }
   .overlay {
     min-height:400px;
     background: transparent;

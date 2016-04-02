@@ -28,9 +28,14 @@
   .close-quotes-container {
     position: relative;
     height: 150px;
+
     .close-quotes {
       position: absolute;
       bottom: 10px;
     }
+  }
+  .close-quotes-container,
+  .open-quotes {
+    display: none;
   }
 }

@@ -20,7 +20,7 @@
     </div>
     <div class="row">
       <div class="col-sm-1">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/open-quotes.png">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/open-quotes.png" class="open-quotes">
       </div>
       <div class="col-sm-10">
         <p class="testimonial"><?php echo $testimonial; ?></p>
