@@ -1,9 +1,43 @@
+$modalWidth: 1300px;
+$modalHeight: 805px;
+$modalHeightPercentage: 0.61923077;
+
+@mixin imageDimensions() {
+  @media screen and (max-width: 524px) {
+    width: 300px!important;
+    height: (300px * $modalHeightPercentage);
+  }
+  @media screen and (min-width: 525px) {
+    width: 475px!important;
+    height: (475px * $modalHeightPercentage);
+  }
+  @media screen and (min-width: 768px) {
+    width: 715px!important;
+    height: (715px * $modalHeightPercentage);
+  }
+  @media screen and (min-width: 992px) {
+    width: 942px!important;
+    height: (942px * $modalHeightPercentage);
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1150px!important;
+    height: (1150px * $modalHeightPercentage);
+  }
+  @media screen and (min-width: 1350px) {
+    width: 1300!important;
+    height: (1300 * $modalHeightPercentage);
+  }
+}
+
 .modal {
   .modal-dialog {
+    @include imageDimensions;
     @include aboveMobile {
       width: 75%;
       height: 75%;
     }
+
+
     .modal-header,
     .modal-footer {
       border: 0;
@@ -26,8 +60,7 @@
     .portfolio-wrapper {
       .image {
         @include background;
-        width: 100%!important;
-        height: 550px;
+        @include imageDimensions;
       }
     }
   }
