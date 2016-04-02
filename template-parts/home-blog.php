@@ -11,7 +11,7 @@
   <a name="home-blog-link" class="scroll-destination"></a>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-xs-12 col-sm-6">
         <h2>Blog</h2>
 
         <?php $args = array(
@@ -50,7 +50,7 @@
         wp_reset_postdata(); ?>
 
       </div>
-      <div class="col-sm-6"></div>
+      <div class="col-xs-12 col-sm-6"></div>
     </div>
     <a href="/blog" class="read-more-link">Read More</a>
   </div>
